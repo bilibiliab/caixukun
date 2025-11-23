@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <title>蔡徐坤的祝福</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft Yahei", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(120deg, #f6d365, #fda085, #84fab0, #8fd3f4);
+            background-size: 400% 400%;
+            animation: gradientBg 15s ease infinite;
+            padding: 0 8px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientBg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .clock {
+            text-align: center;
+            padding: 15px 0;
+            color: #fff;
+            text-shadow: 0 0 10px #000, 0 0 20px #ff00ff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .quote-box {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px auto;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+            border: 2px solid #ff69b4;
+            animation: neonBorder 2s ease infinite alternate;
+            max-width: 100%;
+        }
+
+        @keyframes neonBorder {
+            from { box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4; }
+            to { box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff; }
+        }
+
+        .quote-box p {
+            text-align: center;
+            font-size: 1rem;
+            color: #e63946;
+            font-weight: bold;
+            text-indent: 0;
+            line-height: 1.8;
+        }
+
+        .quote-btn {
+            display: block;
+            margin: 10px auto;
+            padding: 8px 20px;
+            background: linear-gradient(90deg, #ff69b4, #00ffff);
+            border: none;
+            border-radius: 20px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            touch-action: manipulation;
+        }
+
+        .quote-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            padding: 4px 8px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            touch-action: manipulation;
+            border-radius: 4px;
+            min-height: 44px;
+            min-width: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a:hover, a:active {
+            color: #004999;
+            background-color: #e8f4ff;
+            border-radius: 3px;
+            transform: scale(1.02);
+        }
+
+        strong {
+            color: #e63946;
+            text-shadow: 0 0 5px #ff69b4;
+        }
+
+        header {
+            margin: 20px 0 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: #fff;
+            text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff69b4;
+            animation: textGlow 2s ease infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from { text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff; }
+            to { text-shadow: 0 0 20px #ff69b4, 0 0 30px #00ffff, 0 0 40px #ff00ff; }
+        }
+
+        main {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        main:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            color: #444;
+            margin: 20px 0 12px;
+            padding-left: 8px;
+            border-left: 3px solid #ff69b4;
+            text-shadow: 0 0 3px #8fd3f4;
+        }
+
+        p {
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            text-indent: 2em;
+            line-height: 1.7;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ff69b4, transparent);
+            margin: 15px 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.03);
+        }
+
+        audio, video {
+            width: 100%;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        audio:hover, video:hover {
+            transform: scale(1.02);
+        }
+
+        .tip {
+            background-color: #fff8e1;
+            padding: 8px 12px;
+            border-left: 3px solid #ffc107;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 480px) {
+            .clock {
+                font-size: 1rem;
+                padding: 10px 0;
+                letter-spacing: 1px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .quote-box {
+                padding: 15px;
+                margin: 10px auto;
+            }
+            .quote-btn {
+                padding: 6px 15px;
+                font-size: 0.9rem;
+                min-height: 44px;
+                min-width: 120px;
+            }
+            a {
+                padding: 6px 10px;
+                min-height: 44px;
+                min-width: 44px;
+                font-size: 0.9rem;
+            }
+            main {
+                padding: 15px;
+            }
+            h2 {
+                font-size: 1.2rem;
+                margin: 15px 0 10px;
+            }
+            p {
+                font-size: 0.9rem;
+                margin-bottom: 10px;
+            }
+            img {
+                margin: 10px auto;
+                border-radius: 8px;
+            }
+            audio, video {
+                margin: 10px 0;
+                border-radius: 8px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .clock {
+                font-size: 0.9rem;
+            }
+            header h1 {
+                font-size: 1.6rem;
+            }
+            .quote-box p {
+                font-size: 0.9rem;
+            }
+            a {
+                padding: 4px 8px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="clock" id="clock"></div>
+
+    <div class="quote-box">
+        <p id="randomQuote" class="fade-in"></p>
+        <button class="quote-btn" onclick="changeQuote()">换一句语录</button>
+    </div>
+
+    <header>
+        <h1>阿坤</h1>
+    </header>
+
+    <main>
+        <hr>
+        <section>
+            <p>阿坤（KUN），1998年8月2日出生于浙江温州，户籍湖南吉首，中国内地男歌手、演员、原创音乐制作人、MV导演。</p>
+            <img src="./resource/touxiang.jpg" alt="阿坤" loading="lazy">
+        </section>
+        <section>
+            <h2>人物生平</h2>
+            <p>作为唯一受邀出席母版GQ年度MOTY盛典的中国面孔，他携Saint Laurent 2026夏季超季首穿造型亮相，同期新歌《What a Day》上线，在音乐与时尚领域均有亮眼表现。</p>
+            <a href="./resource/zaoxing.jpg" target="_blank" rel="noopener noreferrer">查看2026夏季超季造型</a>
+            <audio src="./resource/Deadman.ogg" controls loading="lazy"></audio>
+            <p>2012年8月，参演偶像剧《童话二分之一》步入大众视线；2018年1月，参加《偶像练习生》以总票数第一出道，成为NINE PERCENT队长；8月发行首张EP《1》，获2018亚洲新歌榜年度盛典最受欢迎潜力男歌手奖。</p>
+            <p class="tip"><strong>温馨提示</strong>：本网页仅用于娱乐学习</p>
+            <video src="./resource/kunfang.mp4" controls muted autoplay playsinline loading="lazy"></video>
+        </section>
+    </main>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const timeStr = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+            document.getElementById('clock').innerText = timeStr;
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+
+        const quotes = [
+            "鸡你太美，篮球与我同在！",
+            "我不会打篮球，但我会唱跳rap！",
+            "你干嘛~哎哟~",
+            "篮球是我的爱好，唱跳是我的专业！",
+            "小黑子，露出鸡脚了吧！",
+            "不要笑，我是认真的练习生！",
+            "我的篮球梦，从唱跳开始！",
+            "鸡哥带你飞，唱跳rap篮球一条龙！",
+            "你再黑我，我就给你唱《只因你太美》！",
+            "练习时长两年半，篮球技术一般般！"
+        ];
+
+        function changeQuote() {
+            const quoteElement = document.getElementById('randomQuote');
+            quoteElement.classList.remove('fade-in');
+            void quoteElement.offsetWidth;
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            quoteElement.innerText = quotes[randomIndex];
+            quoteElement.classList.add('fade-in');
+        }
+
+        window.onload = changeQuote;
+    </script>
+</body>
+</html>
